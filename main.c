@@ -12,8 +12,7 @@
 int main(){
   DDRD |= (1 << PD0);
   while(1){
-    _delay_ms(A);
-    PORTD ^= (1 << PD0);
+    toogleLED();
   }
   return 0;
 }
