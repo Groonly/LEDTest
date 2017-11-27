@@ -7,8 +7,6 @@
 #include <avr/wdt.h>
 #include <avr/power.h>
 
-#include "AVR-Test-Library/func.h"
-
 int main(){
   DDRD |= (1 << PD0);
   while(1){
