@@ -5,6 +5,6 @@ int main(){
   int a;
   printf("HEJ!!\n");
   scanf("%d", &a);
-  printf("%d are you", a); 
+  printf("%d are y", a); 
 return 0;
 }

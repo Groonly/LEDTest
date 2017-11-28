@@ -14,7 +14,7 @@ LFLAGS = -Wall $(DEBUG)
 test: $(OBJECTS)
 	$(CC) $(LFLAGS) $(OBJECTS) -o test
 
-%.o: %.c $(HEADERS) Makefile
+%.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) $(SOURCES);
 
 clean:
