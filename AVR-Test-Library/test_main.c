@@ -2,9 +2,6 @@
 #include <stdio.h>
 
 int main(){
-  int a;
-  printf("HEJ!!\n");
-  scanf("%d", &a);
-  printf("%d are y", a); 
+  printf("-----TEST----\n");
 return 0;
 }
