@@ -12,7 +12,7 @@ int main(){
   DDRD |= (1 << PD0);
   while(1){
     PORTD ^= 1 << PD0;
-    _delay_ms(3000);
+    _delay_ms(100);
   }
   return 0;
 }
