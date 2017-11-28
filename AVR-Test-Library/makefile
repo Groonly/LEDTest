@@ -1,26 +1,24 @@
-all: calculator_test calculator
+UNITY = ..\Libs\unity\extras\fixture\src\unity_fixture.c
 
-calculator_test: unity.o calculatorFunc.o calculatorTest.o
-	gcc -o calculator_test calculatorFunc.o unity.o calculatorTest.o
+SOURCE = $(wildcard *.c) $(UNITY)
+OBJECTS=$(SOURCES:.c=.o)
+HEADERS=$(SOURCES:.c=.h)
 
-calculator: calculatorFunc.c calculatorIO.c
-	gcc -o calculator calculatorFunc.c calculatorIO.c
+CC = gcc
+DEBUG = -g
+CFLAGS = -Wall -c $(DEBUG)
+LFLAGS = -Wall $(DEBUG)
 
-calculatorTest.o:
-	gcc -c calculatorTest.c
+calculator_test: $(OBJECTS)
+	$(CC) $(LFLAGS) $(OBJECTS) -o LEDTEST
 
-calculatorFunc.o:
-	gcc -c calculatorFunc.c
+%.o: %.c $(HEADERS) Makefile
+	 $(CC) $(CFLAGS) -c -o $@ $<;
 
-unity.o:
-		gcc -c Libs/unity/src/unity.c
-
-calculatorIO.o:
-	gcc - c calculatorIO.c
 
 clean:
-	-rm -f *.o
-	-rm -f *.exe
+	rm \*.o
+	rm \*.exe
 
 run:
 	calculator.exe
