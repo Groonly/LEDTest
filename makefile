@@ -12,7 +12,7 @@ BAUD  = 9600UL
 ## If you move either the current folder or the Library folder, you'll
 ##  need to change this path to match.
 LIBDIR =  AVR-Programming-Library
-TESTDIR = AVR-Test-Library
+TESTDIR = #AVR-Test-Library
 #UNITY = ../../Libs/unity/extras/fixture/src/unity_fixture.h
 
 ##########------------------------------------------------------##########
