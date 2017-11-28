@@ -11,7 +11,7 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-all: test run 
+all: test
 
 test: $(OBJECTS)
 	$(CC) $(LFLAGS) $(OBJECTS) -o test
