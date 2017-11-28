@@ -93,10 +93,13 @@ $(TARGET).elf: $(OBJECTS)
 ## These targets don't have files named after them
 .PHONY: all disassemble disasm eeprom size clean squeaky_clean flash fuses
 
-all: $(TARGET).hex subsystem
+all: $(TARGET).hex sub-make
 
-subsystem:
-	$(MAKE) -C AVR-Test-Library
+sub-make:
+	$(MAKE) -C AVR-Test-Library MAKEFLAGS= all
+
+sub-clean:
+	$(MAKE) -C AVR-Test-Library MAKEFLAGS= clean
 
 debug:
 	@echo
@@ -116,7 +119,7 @@ disasm: disassemble
 size:  $(TARGET).elf
 	$(AVRSIZE) -C --mcu=$(MCU) $(TARGET).elf
 
-clean:
+clean: sub-clean
 	rm -f $(TARGET).elf $(TARGET).hex $(TARGET).obj \
 	$(TARGET).o $(TARGET).d $(TARGET).eep $(TARGET).lst \
 	$(TARGET).lss $(TARGET).sym $(TARGET).map $(TARGET)~ \
