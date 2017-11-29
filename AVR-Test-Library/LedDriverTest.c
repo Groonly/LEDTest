@@ -1,5 +1,7 @@
 #include  "../unity/extras/fixture/src/unity_fixture.h"
+#include "../src/LedDriver.h"
 #include <stdint.h>
+
 TEST_GROUP(LedDriver);
 
 TEST_SETUP(LedDriver){
