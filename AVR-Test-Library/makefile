@@ -1,6 +1,6 @@
 SRC_FILES1=\
-  ../Libs/unity/src/unity.c \
-  ../Libs/unity/extras/fixture/src/unity_fixture.c \
+  ../unity/src/unity.c \
+  ../unity/extras/fixture/src/unity_fixture.c \
 
 SOURCES=$(wildcard *.c) $(SRC_FILES1)
 OBJECTS=$(SOURCES:.c=.o)
