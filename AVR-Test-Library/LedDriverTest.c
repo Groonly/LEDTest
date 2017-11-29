@@ -1,5 +1,5 @@
 #include  "../unity/extras/fixture/src/unity_fixture.h"
-
+#include <stdint.h>
 TEST_GROUP(LedDriver);
 
 TEST_SETUP(LedDriver){
@@ -11,5 +11,7 @@ TEST_TEAR_DOWN(LedDriver){
 }
 
 TEST(LedDriver, LedsOffAfterCreate){
-  //TEST_FAIL_MESSAGE("\nStart here");
+  uint16_t virtualLeds = 0xffff;
+  LedDriver_Create(&virtualLeds);
+  TEST_ASSERT_EQUAL_HEX16(0, virtualLeds);
 }
