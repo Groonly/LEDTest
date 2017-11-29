@@ -11,7 +11,7 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-all: test
+all: test run
 
 test: $(OBJECTS)
 	$(CC) $(LFLAGS) $(OBJECTS) -o test
@@ -20,8 +20,8 @@ test: $(OBJECTS)
 	$(CC) $(CFLAGS) $(SOURCES);
 
 clean:
-	rm \*.exe
 	rm \*.o
+	rm \*.exe
 
 run:
 	./test.exe
