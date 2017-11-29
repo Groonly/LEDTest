@@ -97,12 +97,12 @@ all: $(TARGET).hex sub-make
 
 sub-make:
 	$(MAKE) -C src MAKEFLAGS= all
-	$(MAKE) -C AVR-Test-Library MAKEFLAGS= all
+	#$(MAKE) -C AVR-Test-Library MAKEFLAGS= all
 
 sub-clean:
 	$(MAKE) -C AVR-Test-Library MAKEFLAGS= clean
-	$(MAKE) -C src MAKEFLAGS= clean
-	
+	#$(MAKE) -C src MAKEFLAGS= clean
+
 debug:
 	@echo
 	@echo "Source files:"   $(SOURCES)
