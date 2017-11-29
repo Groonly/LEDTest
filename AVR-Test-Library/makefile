@@ -2,7 +2,7 @@ SRC_FILES1=\
   ../unity/src/unity.c \
   ../unity/extras/fixture/src/unity_fixture.c \
 	../src/LedDriver.c
-	
+
 SOURCES=$(wildcard *.c) $(SRC_FILES1)
 OBJECTS=$(SOURCES:.c=.o)
 HEADERS=$(SOURCES:.c=.h)
