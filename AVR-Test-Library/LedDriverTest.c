@@ -43,7 +43,7 @@ TEST(LedDriver, TurnOffAnyLed){
   TEST_ASSERT_EQUAL_HEX(0xff7f, virtualLeds);
 }
 
-TEST(LedDriver, TurnAllOn){
+TEST(LedDriver, AllOn){
   LedDriver_TurnAllOn();
   TEST_ASSERT_EQUAL_HEX(0xffff, virtualLeds);
 }
